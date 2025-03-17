@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io("https://realtimechatapp-5str.onrender.com", { transports: ["websocket"] });
 
 let currentUser = "";
 

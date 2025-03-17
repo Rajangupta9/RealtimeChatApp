@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <!-- Username Display -->
+    <h2 id="usernameDisplay" class="hidden">Welcome, <span id="displayName"></span> 👋</h2>
+
+    <!-- Registration Form -->
+    <form id="registerForm">
+        <label for="username">Enter Your Username:</label>
+        <input type="text" id="username" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="chatSection" class="hidden">
+        <hr>
+
+        <!-- Group Chat -->
+        <h3>Group Chat</h3>
+        <div id="chatBox"></div>
+        <form id="groupChatForm">
+            <input type="text" id="groupMessage" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+
+        <hr>
+
+        <!-- Private Messaging -->
+        <h3>Private Message</h3>
+        <form id="privateChatForm">
+            <input type="text" id="receiver" placeholder="Recipient Username" required>
+            <input type="text" id="privateMessage" placeholder="Type private message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
